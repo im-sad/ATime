@@ -1,5 +1,5 @@
 #noscript {
-  background:$color-sub;
+  background: $color-sub;
   padding: 16px;
   text-align: center;
   color: $color-white;
@@ -17,8 +17,7 @@
 
   // MEDIA
   @media screen and (max-width: $media-laptop) {
-    padding-left: 24px;
-    padding-right: 24px;
+    padding-left: 24px; padding-right: 24px;
   }
 
   @media screen and (max-width: $media-tablet) {

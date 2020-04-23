@@ -102,7 +102,6 @@
     cursor: pointer;
     font-size: 18px;
     white-space: nowrap;
-    color: currentColor;
     text-decoration: none;
     font-weight: 500;
     color: $color-text;
@@ -149,7 +148,7 @@
     border-radius: 10px;
     border: 1px solid $color-main;
     padding: (12px - 4) 24px;
-    box-shadow: 0px 4px 0px $color-main-shadow;
+    box-shadow: 0 4px 0 $color-main-shadow;
     transition: opacity 0.3s ease;
 
     &::before,
@@ -170,7 +169,7 @@
 
     &::after {
       border: 12px solid transparent;
-      border-bottom-color:$color-white;
+      border-bottom-color: $color-white;
       left: 59px;
       top: 1px;
       transform: translateY(-100%);
@@ -242,7 +241,7 @@
       max-height: 0;
       overflow: hidden;
       position: static;
-      background:$color-back;
+      background: $color-back;
       transition: max-height 0.5s ease;
     }
 
