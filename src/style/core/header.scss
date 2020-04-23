@@ -57,7 +57,7 @@
       box-shadow: 0 8px 0 rgba($color-black, 0.15);
       background: $color-white;
       z-index: $z-menu;
-      transition: max-height 0.3s ease, padding 0.3s ease;
+      transition: max-height 0.6s ease, padding 0.6s ease;
 
       &.is-active {
         max-height: 100vh;
@@ -243,7 +243,7 @@
       overflow: hidden;
       position: static;
       background:$color-back;
-      transition: max-height 0.3s linear;
+      transition: max-height 0.5s ease;
     }
 
     &__link--sub.is-opened + &__sub {
