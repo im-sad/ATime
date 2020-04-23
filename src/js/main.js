@@ -1,3 +1,5 @@
+@@include('plugins/swiper.min.js')
+
 document.addEventListener('DOMContentLoaded', function() {
   'use strict';
 
