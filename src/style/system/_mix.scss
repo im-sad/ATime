@@ -19,3 +19,9 @@
   line-height: 130%;
   font-weight: 700;
 }
+
+@mixin selection() {
+  &::selection {
+    background: rgba($color-sub, 0.5);
+  }
+}

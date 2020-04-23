@@ -77,6 +77,8 @@
 }
 
 .header-menu {
+  user-select: none;
+
   &__list {
     display: flex;
     justify-content: flex-start;

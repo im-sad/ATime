@@ -7,9 +7,11 @@
   padding-right: 32px;
   padding-top: 122px - 30px;
   padding-bottom: 92px;
+  
 
   &__title {
     margin-bottom: 37px;
+    @include selection;
   }
 
   &__description {
@@ -21,6 +23,7 @@
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 56px;
+    @include selection;
   }
 
   // MEDIA
@@ -186,14 +189,12 @@
     font-size: 25px;
     line-height: 130%;
     font-weight: 400;
-    // white-space: nowrap;
-    // max-width: 100%;
-    // overflow: hidden;
-    // text-overflow: ellipsis;
+    @include selection;
   }
 
   &__text {
     color: $color-text-light;
+    @include selection;
   }
 
   &__more {
@@ -207,6 +208,7 @@
     background: url("data:image/svg+xml,%3Csvg width='22' height='16' viewBox='0 0 22 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15 15.0007L21 8.00073L15 1.00073' stroke='%239C69E2' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M21 8.00073H1' stroke='%239C69E2' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A") no-repeat right 2px center;
     padding-right: 24px + 22px;
     transition: background-position 0.2s linear, color 0.2s ease;
+    user-select: none;
   }
 
   &:hover &__more{

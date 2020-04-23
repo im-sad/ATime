@@ -76,6 +76,7 @@
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
+  user-select: none;
 
   &__item {
     margin-right: 54px;
