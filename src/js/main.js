@@ -11,7 +11,13 @@ document.addEventListener('DOMContentLoaded', function() {
     for (let i = 0; i < demoLinks.length; i++) {
       demoLinks[i].addEventListener('click', function(e) {
         e.preventDefault();
-        alert('whoof whoof');
+        const rootEl = document.documentElement;
+
+        rootEl.classList.add('demo');
+
+        setTimeout(function() {
+          rootEl.classList.remove('demo');
+        }, 1000);
       })
     }
   })();

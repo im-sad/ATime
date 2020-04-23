@@ -14,7 +14,16 @@ html,body,div,span,h1,h2,h3,h4,h5,h6,p,img,em,strike,strong,s,b,u,i,dl,dt,dd,ol,
 article,aside,details,figcaption,figure,footer,header,nav,section,main,menu {display:block}
 
 
-html {font-size:$font-base;-webkit-tap-highlight-color:transparent;-webkit-backface-visibility:hidden;-ms-overflow-style:scrollbar;box-sizing:border-box;}
+html {
+  font-size: $font-base;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-backface-visibility: hidden;
+  -ms-overflow-style: scrollbar;
+  box-sizing:border-box;
+  transition: opacity 0.5s ease;
+  opacity: 1;
+}
+
 body {
   font: #{$font-size}/#{$line-height} $font;
   text-align: left;
