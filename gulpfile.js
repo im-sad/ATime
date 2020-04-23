@@ -18,7 +18,6 @@ var gulp         = require('gulp'),
 		prefixer     = require('gulp-autoprefixer'),
 		cleanCSS     = require('gulp-clean-css'),
 		csscomb      = require('gulp-csscomb'),
-		wiredep      = require('wiredep').stream,
 		imagemin     = require('gulp-imagemin'),
 		pngquant     = require('imagemin-pngquant'),
 		svgSprite = require('gulp-svg-sprites'),
@@ -128,10 +127,6 @@ gulp.task('html:build', function () {
 	gulp.src(path.src.html)
 		.pipe(plumber())
 		.pipe(fileinclude())
-		.pipe(wiredep({
-      optional: 'configuration',
-      goes: 'here'
-    }))
 		.pipe(useref())
 		.pipe(gulp.dest(path.build.html))
 		.pipe(reload({stream: true}));
