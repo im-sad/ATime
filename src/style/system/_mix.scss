@@ -1,0 +1,21 @@
+// Mixins
+@mixin font-size($fontSize, $fontInterliase) {
+  font-size: $sizeValue;
+  line-height: $fontInterliase / $fontSize;
+}
+
+@mixin line-height($fontSize, $fontInterliase) {
+  line-height: $fontInterliase / $fontSize;
+}
+
+@mixin better-fonts() {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// Styles mixin
+@mixin title-h1() {
+  font-size: 40px;
+  line-height: 130%;
+  font-weight: 700;
+}

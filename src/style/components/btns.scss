@@ -1,0 +1,85 @@
+/* BTNS */
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  vertical-align: middle;
+  line-height: $btn-line-heigh;
+  text-align: center;
+  transition: background 0.3s;
+  position: relative;
+  bottom: 0;
+  box-sizing: border-box;
+  border: 1px solid transparent; //1px border для равной с .field высоты
+  max-width: 100%;
+  opacity: 1;
+  text-overflow: ellipsis;
+  outline: none;
+
+  // state
+  &:hover {
+    text-decoration: none;
+    cursor:pointer;
+    }
+
+  &:disabled {
+    cursor: default;
+    opacity: 0.7;
+  }
+
+  // sizes
+  &--size-base {
+    font-size: 16px;
+    height: $size-control-base;
+    padding-left: 28px;
+    padding-right: 28px;
+  }
+
+  &--size-large {
+    font-size: 18px;
+    height: $size-control-large;
+    padding-left: 58px;
+    padding-right: 58px;
+  }
+}
+
+.btn-main {
+  background: $color-main;
+  color: $color-white;
+  border-radius: 50px;
+  text-shadow: 1px 1px 0 rgba($color-black, 0.1);
+
+  &:hover {
+    background-color: $color-main-lighten;
+    color: $color-white;
+  }
+
+  &:active {
+    bottom: -1px;
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 2px rgba($color-main, 0.5);
+  }
+}
+
+.btn-accent {
+  background: $color-accent;
+  color: $color-white;
+  border-radius: 50px;
+  text-shadow: 1px 1px 0 rgba($color-black, 0.1);
+
+  &:hover {
+    background-color: $color-accent-lighten;
+    color: $color-white;
+  }
+
+  &:active {
+    bottom: -1px;
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 2px rgba($color-accent, 0.5);
+  }
+}

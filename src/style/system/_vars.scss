@@ -1,0 +1,51 @@
+// Base
+$w: 1440px;
+$w-default: 1200px;
+$bg: #fff;
+$img: '../img';
+
+// Colors
+$color-black: #000;
+$color-white: #fff;
+
+$color-main: #9C69E2;
+$color-main-lighten: #B17FF4;
+$color-main-shadow: #E2CEFE;
+$color-sub: #F063B8;
+$color-accent: #FFC84D;
+$color-accent-lighten: #FFBE2D;
+$color-text: #212353;
+$color-text-light: #4B5D68;
+$color-muted: #A9A0B6;
+$color-light: #FFF3D7;
+$color-border: #D6B9FF;
+$color-back: #F9F4FF;
+
+$color-link: $color-accent;
+$color-link-hover: darken($color-accent, 20%);
+
+// Fonts options
+$font: 'Roboto', Arial, 'Helvetica CY', 'Nimbus Sans L', sans-serif;
+$font-base: 62.5%;
+$font-size: 16px;
+$line-height: 1.5;
+
+// Controls
+$btn-line-heigh: 1.25;
+$form-line-height: 1.25;
+
+$size-control-base: 48px;
+$size-control-large: 60px;
+
+// Z-index
+$z-dropdown: 9;
+$z-menu: 9;
+
+// Media
+$media-desktop-large: 1440px;
+$media-desktop-medium: 1200px;
+$media-desktop: 1100px;
+$media-laptop: 992px;
+$media-tablet: 768px;
+$media-mobile: 520px;
+$media-phone: 420px;

@@ -1,0 +1,10 @@
+.title {
+  display: block;
+  cursor: default;
+  text-align: center;
+  clear: both;
+
+  &--h1 {
+    @include title-h1;
+  }
+}

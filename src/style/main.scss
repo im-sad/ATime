@@ -1,0 +1,17 @@
+// Base
+@import "system/reset";
+
+// Core
+@import "core/core";
+@import "core/header";
+@import "core/footer";
+
+// Components
+@import "components/logo";
+@import "components/burger";
+@import "components/titles";
+@import "components/forms";
+@import "components/btns";
+
+// Pages
+@import "pages/index";

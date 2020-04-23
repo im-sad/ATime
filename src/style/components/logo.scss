@@ -1,0 +1,56 @@
+.logo {
+  position: relative;
+  display: inline-flex;
+  flex: 0 0 auto;
+  justify-content: flex-start;
+  align-items: flex-end;
+  vertical-align: top;
+  height: 35px;
+  width: (20px * 2) + 9px;
+  line-height: 1;
+  user-select: none;
+
+  &::before,
+  &::after {
+    content:'';
+    display: inline-block;
+    width: 20px;
+    border-radius: 20px;
+  }
+
+  &::before {
+    height: 20px;
+    background: $color-main;
+  }
+
+  &::after {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 35px;
+    background: $color-sub;
+  }
+
+  &--is-animated::before {
+    animation: bounce 0.8s linear forwards 0.4s;
+  }
+
+  &--white::before,
+  &--white::after {
+    background-color: $color-white;
+  }
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+
+  40% {
+    transform: translateY(-10px);
+  }
+
+  60% {
+    transform: translateY(-5px);
+  }
+}
