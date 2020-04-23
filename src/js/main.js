@@ -41,27 +41,63 @@ document.addEventListener('DOMContentLoaded', function() {
   // SLIDER
   (function() {
     const featuresSlider = document.getElementById('js-features');
+    let swiperSlider;
 
-    if (!featuresSlider) return;
+    const breakpointChecker = function() {
+      if (swiperSlider !== undefined ) swiperSlider.destroy(true, true);
 
-    const featuresSliderObj = new Swiper (featuresSlider, {
-      slidesPerView: 1,
-      observer: true,
-      loop: false,
-      autoHeight: true,
-      grabCursor: true,
-      pagination: {
-        el: '#js-features-pag',
-        clickable: true
-      },
-      breakpoints: {
-        1200: {
-          slidesPerView: 2,
-          autoHeight: false,
+      return initSwiper();
+    };
+
+    const initSwiper = function() {
+      swiperSlider = new Swiper (featuresSlider, {
+        slidesPerView: 1,
+        loop: false,
+        autoHeight: true,
+        grabCursor: true,
+        pagination: {
+          el: '#js-features-pag',
+          clickable: true
+        },
+        breakpoints: {
+          1202: {
+            slidesPerView: 2,
+            autoHeight: false,
+          }
         }
-      }
-    });
-  })();
+      });
+    };
 
+    window.addEventListener('resize', throttle(breakpointChecker, 500));
+    breakpointChecker();
+
+    function throttle(func, ms) {
+      var isThrottled = false,
+          savedArgs,
+          savedThis;
+
+      function wrapper() {
+        if (isThrottled) {
+          savedArgs = arguments;
+          savedThis = this;
+          return;
+        }
+
+        func.apply(this, arguments);
+
+        isThrottled = true;
+
+        setTimeout(function() {
+          isThrottled = false;
+          if (savedArgs) {
+            wrapper.apply(savedThis, savedArgs);
+            savedArgs = savedThis = null;
+          }
+        }, ms);
+      }
+
+      return wrapper;
+    }
+  })();
 
 });
